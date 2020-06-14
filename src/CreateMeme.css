@@ -1,0 +1,5 @@
+.CreateMeme {
+    grid-column: span 3;
+    background-color: rgb(163, 236, 236);
+    color: black;
+}

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,700');
+
+.Caption {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    font-weight: bold;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.Meme {
+    /* width: 500px; */
+    height: 500px;
+    cursor: pointer;
+    position: relative;
+}
+
+.Meme img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.Meme .buttons{
+    z-index: 1;
+
+}
+
+img {
+    height: 300px;
+    cursor: default;
+}
+
+button {
+    position: relative;
+    color: black;
+    width: 100px;
+    height: 64px;
+    line-height: 64px;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+
+  button::before, button::after {
+    content: '';
+    position: absolute;
+    transition: all 0.3s;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  button::before {
+      left: 4px;
+      z-index: 1;
+    
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(0.1, 1);
+  }
+  
+  button:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  
+  button::after {
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  button:hover::after {
+    transform: scale(1, .1);
+    opacity: 0;
+  }
+
+  img:hover {
+    transform: scale(1.02, 1.02)
+  }
